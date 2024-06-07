@@ -114,6 +114,11 @@ class CI_ChatGPT_Main {
 
     public function status_404($response) {
         $message = '';
+        if (is_wp_error( $response )) {
+            $message .= $response->get_error_messages() !== null ? $response->get_error_messages()[0] : esc_html__( 'Other Error.', 'wp_ci' );
+            $this->bad_result($message);
+            return true;
+        }
         if ( isset( $response['status'] ) && 404 === $response['status'] ) {
             $message .= isset( $response['body']->error->message ) ? $response['body']->error->message : esc_html__( 'Provided url not found.', 'wp_ci' );
             $this->bad_result($message);
