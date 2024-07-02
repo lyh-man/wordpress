@@ -11,6 +11,8 @@ class CI_ChatGPT_Main {
     public function enqueue_styles() {
         wp_enqueue_style('dashicons', get_template_directory_uri() . '/path/to/dashicons.min.css', array(), null);
         wp_enqueue_style('ci_chatgpt_style', CI_PLUGIN_DIR_URL . 'chatgpt/assets/css/chatgpt.css', array(), $this->version, 'all');
+
+        wp_enqueue_style('ci_interprets_dreams_style', CI_PLUGIN_DIR_URL . 'chatgpt/assets/css/interprets-dreams.css', array(), $this->version, 'all');
     }
 
     public function enqueue_scripts() {
@@ -21,6 +23,9 @@ class CI_ChatGPT_Main {
             'action'                => 'ci_chatgpt_openai_generate_answer'
         );
         wp_localize_script('ci_chatgpt_script', 'ci_chatgpt', $ajaxData);
+
+        wp_enqueue_script('ci_interprets_dreams_script', CI_PLUGIN_DIR_URL . 'chatgpt/assets/js/interprets-dreams.js', array( 'jquery' ), $this->version, false);
+        wp_localize_script('ci_interprets_dreams_script', 'ci_chatgpt', $ajaxData);
     }
 
     public function ci_chatgpt_openai_generate_answer_output_json( $args ) {

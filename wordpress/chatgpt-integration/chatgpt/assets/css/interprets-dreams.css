@@ -1,0 +1,97 @@
+#id_wrapper, #id_header, #id_body {
+    width: 1000px;
+    margin: 0 !important;
+    padding: 0;
+}
+
+.id_menu {
+    width: 100%;
+    background: #8e6a4d;
+    height: 40px;
+    overflow: hidden;
+    background-size: auto 40px;
+    margin: 0;
+    padding: 0;
+    line-height: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.id_menu li {
+    font-size: 15px;
+    background: #8e6a4d;
+    display: inline-block;
+    margin: 0;
+}
+
+.id_menu li:last-child {
+    margin-right: 0;
+}
+
+.id_menu li i {
+    border-left: solid 1px #F9AACF;
+    display: inline-block;
+    height: 15px;
+    vertical-align: middle;
+    border-color: #B18B6D;
+    margin: 0 15px;
+}
+
+#id_body {
+    background: url(../images/interprets-dreams.png) no-repeat;
+    height: 105px;
+    padding: 45px 0 0 290px;
+}
+
+#id_body input {
+    width: 400px;
+    height: 36px;
+    line-height: 40px;
+    border: 1px solid #afafaf;
+    background: #fff;
+    vertical-align: middle;
+    font-size: 12px;
+    color: #999;
+    padding-left: 10px
+}
+
+#id_body button {
+    width: 101px;
+    height: 41px;
+    border: 0;
+    color: #555;
+    font-size: 14px;
+    font-weight: bold;
+    vertical-align: middle;
+    margin-left: 4px;
+    cursor: pointer;
+}
+
+.id_keywords {
+    background: #8e6a4d;
+    height: 40px;
+    width: 60%;
+    overflow: hidden;
+    background-size: auto 40px;
+    margin: 0 10px 0 0;
+    padding: 0;
+    line-height: 40px;
+    display: flex;
+    justify-content: left;
+}
+
+.id_keywords li {
+    font-size: 10px;
+    display: inline-block;
+    margin: 0;
+}
+
+.id_keywords li i {
+    border-left: solid 1px #F9AACF;
+    display: inline-block;
+    height: 15px;
+    vertical-align: middle;
+    border-color: #B18B6D;
+    margin: 0 5px;
+    visibility: hidden;
+}
